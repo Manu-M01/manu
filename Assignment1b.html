@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css " integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title> AJAX</title>
+
+    <style>
+        body {
+            background-color: brown;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <div align="center">
+        <form action="Assignment1b.html">
+            <center>
+                <h1>Registration Form</h1>
+            </center>
+            <br><br><br><br> Name:
+            <input class="txt" type="text" name="name" required placeholder="Enter your name"><br><br> MobileNo:
+            <input class="txt" type="text" name="name" required placeholder="Mobile NO"><br> <br> Mail:
+            <input class="txt" type="email" name="email" required placeholder="Enter your email"><br> <br> Password: <input class="txt" type="password" name="password" required placeholder="Enter your password"><br> <br> ConfirmPassword:
+            <input class="txt" type="password" name="cpassword" required placeholder="confirm your password"><br><br>
+            <input type="submit" name="submit" value="Register" onclick="saveData()">
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        function saveData() {
+            let user, email, contact, psw;
+            user = document.getElementById('user').value;
+            email = document.getElementById('email').value;
+            contact = document.getElementById('contact').value;
+            pwd = document.getElementById('pass').value;
+
+            localStorage.setItem("Username", user);
+            localStorage.setItem("Email", email);
+            localStorage.setItem("Mobile no", contact);
+            localStorage.setItem("password", psw);
+
+        }
+    </script>
+</body>
+
+</html>
